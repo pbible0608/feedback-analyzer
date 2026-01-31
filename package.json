@@ -1,0 +1,19 @@
+{
+  "name": "feedback-analyzer",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "tsc --noEmit",
+    "db:setup": "wrangler d1 execute feedback-analyzer-db --local --file=schema.sql"
+  },
+  "dependencies": {
+    "hono": "^4.6.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241205.0",
+    "typescript": "^5.5.3",
+    "wrangler": "^3.99.0"
+  }
+}
